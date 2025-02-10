@@ -149,7 +149,7 @@ class SequenceModel():
 
     def load_param(self, param_path):
         self.model.load_state_dict(torch.load(param_path, map_location=self.device))
-        self.fitted = 'Previously trained.'
+        self.fitted = 1
 
     def fit(self, dl_train, dl_valid=None):
         train_loader = self._init_data_loader(dl_train, shuffle=True, drop_last=True)
