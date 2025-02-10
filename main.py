@@ -82,7 +82,7 @@ def predict_model(dl_test, universe, prefix, d_feat, d_model, t_nhead, s_nhead, 
 
 def main():
     parser = argparse.ArgumentParser(description='Train or predict using MASTERModel.')
-    parser.add_argument('task', choices=['train', 'predict'], help='Task to perform: train or predict')
+    parser.add_argument('--task', choices=['train', 'predict'], help='Task to perform: train or predict')
     parser.add_argument('--universe', default='csi300', choices=['csi300', 'csi800'], help='Universe to use')
     parser.add_argument('--prefix', default='opensource', choices=['original', 'opensource'], help='Prefix for data')
     args = parser.parse_args()
